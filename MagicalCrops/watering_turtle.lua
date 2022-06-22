@@ -1,4 +1,4 @@
---script to water a (by default) 24x24 farm, design to work with MagicalCrops and utilizing
+--script to water a (by default) 24x24 farm, design to work with MagicalCrops and utilizing a turtle
 
 local arg = {...}
 --global variables
@@ -11,7 +11,7 @@ local turn_left = true
 local fuels_table = {
   ["minecraft:coal"]=true,
   ["minecraft:coal_block"]=true,
-  ["minecraft:coal:1"]=true --for accepting charcoal, however it might not be necessary
+  ["minecraft:coal:1"]=true
 }
  
 --functions
@@ -128,6 +128,7 @@ local function main()
   turtle.forward()
   turtle.forward()
   turtle.turnRight()
+  turn_left = true
   end
 end
  
