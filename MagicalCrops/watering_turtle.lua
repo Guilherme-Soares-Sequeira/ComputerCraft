@@ -52,7 +52,7 @@ local function turtleRefill()
     
     if (turtle.refuel() == false) then --there is no more fuel here
  
-      if (get_fuel_index == false) then --there is no more fuel in the turtle
+      if (get_fuel_index() == false) then --there is no more fuel in the turtle
         print("Out of fuel...")
         return false
       end
@@ -73,13 +73,13 @@ end
  
 local function get_shell_arguments()
   if (arg[1] ~= nil) then
-    if (tonumber(arg[1] ~= nil)) then
+    if tonumber(arg[1]) ~= nil then
       col_max = tonumber(arg[1])
     end
   end
  
   if (arg[2] ~= nil) then
-    if (tonumber(arg[1] ~= nil)) then
+    if tonumber(arg[1]) ~= nil then
       row_max = tonumber(arg[2])
     end
   end
